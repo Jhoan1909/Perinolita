@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhosep and Jhoan's Clothes</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Barra de navegación */
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #a8a8a8;
+        }
+
+        /* Sección Principal (Hero) */
+        .hero {
+            height: 70vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+        .btn-principal {
+            background-color: white;
+            color: #111;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .btn-principal:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Sección de Productos */
+        .productos-seccion {
+            padding: 60px 50px;
+            text-align: center;
+        }
+        .productos-seccion h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .grid-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        .tarjeta-producto {
+            background: white;
+            padding-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .tarjeta-producto:hover {
+            transform: translateY(-10px);
+        }
+        .tarjeta-producto img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        .info-producto {
+            padding: 15px;
+        }
+        .titulo-producto {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .precio-producto {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .btn-comprar {
+            background-color: #111;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            width: 90%;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .btn-comprar:hover {
+            background-color: #444;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer-links a {
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="#">Jhosep and Jhoan's</a>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Hombre</a>
+            <a href="#">Mujer</a>
+            <a href="#">Colección 2026</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Elegancia Atemporal</h1>
+        <p>Descubre la nueva línea de ropa diseñada para destacar en cualquier ocasión. Materiales premium y diseños exclusivos.</p>
+        <button class="btn-principal">Ver Catálogo Completo</button>
+    </section>
+
+    <section class="productos-seccion">
+        <h2>Novedades</h2>
+        <div class="grid-productos">
+            
+            <div class="tarjeta-producto">
+                <a href="#"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&q=80" alt="Camiseta Básica Premium"></a>
+                <div class="info-producto">
+                    <div class="titulo-producto">Camiseta Básica Premium</div>
+                    <div class="precio-producto">$29.99</div>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto">
+                <a href="#"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&q=80" alt="Chaqueta de Cuero Clásica"></a>
+                <div class="info-producto">
+                    <div class="titulo-producto">Chaqueta de Cuero Clásica</div>
+                    <div class="precio-producto">$119.99</div>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto">
+                <a href="#"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&q=80" alt="Jeans Corte Recto"></a>
+                <div class="info-producto">
+                    <div class="titulo-producto">Jeans Denim Corte Recto</div>
+                    <div class="precio-producto">$59.99</div>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="tarjeta-producto">
+                <a href="#"><img src="https://images.unsplash.com/photo-1550639525-c97d455acf70?w=500&q=80" alt="Vestido de Noche Elegante"></a>
+                <div class="info-producto">
+                    <div class="titulo-producto">Vestido de Noche Elegante</div>
+                    <div class="precio-producto">$89.99</div>
+                    <button class="btn-comprar">Añadir al carrito</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jhosep and Jhoan's Clothes. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#">Políticas de Privacidad</a>
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Envíos y Devoluciones</a>
+        </div>
+    </footer>
+
+    <script>
+        // =========================================================
+        // ¡MODIFICA SOLO ESTA LÍNEA CON TU ENLACE!
+        // =========================================================
+        const ENLACE_DESTINO = "https://media1.tenor.com/m/Kb8RvOsOhDUAAAAC/gay-lgbt.gif"; 
+
+        // Este código detecta CUALQUIER clic en la página (botones, enlaces, imágenes)
+        // y fuerza al navegador a ir a la página que pusiste arriba.
+        document.addEventListener("DOMContentLoaded", function() {
+            // Selecciona todos los enlaces (a), botones (button) y tarjetas de producto
+            const elementosInteractivos = document.querySelectorAll('a, button, .tarjeta-producto');
+            
+            elementosInteractivos.forEach(elemento => {
+                elemento.addEventListener('click', function(evento) {
+                    evento.preventDefault(); // Detiene lo que sea que el botón iba a hacer
+                    window.location.href = ENLACE_DESTINO; // Te lleva a tu página
+                });
+            });
+        });
+    </script>
+</body>
+</html>
